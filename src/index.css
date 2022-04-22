@@ -59,9 +59,9 @@ h1{
 
 .app .description{
   position: relative;
-  right: -90%;
+  right: 0;
   transform-origin: 0 0;
-  transform: rotate(269deg);
+  /* transform: rotate(269deg); */
 }
 
 .app .bottom{
@@ -74,6 +74,9 @@ h1{
   border-radius: 12px;
   background-color: rgba(255,255,255, 0.2);
 
+}
+.icon-img{
+  width:80px;
 }
 
 .bold {
