@@ -37,10 +37,12 @@ function App() {
             </div>
             <div className='temp'>
               {data.main ? <h1>{data.main.temp.toFixed()} °C</h1> : null}
+              {data.main ?<img className='icon-img' src= {`https://raw.githubusercontent.com/yuvraaaj/openweathermap-api-icons/master/icons/${data.weather[0].icon}.png`}/> : null}
             </div>
             <div className='description'>
+            <p>Description</p>
               {data.weather ? <p>{data.weather[0].main}</p> : null}
-              <p>clouds</p>
+              
             </div>
           </div>
 
@@ -48,18 +50,21 @@ function App() {
           {data.name != undefined &&
           <div className='bottom'>
             <div className='feels'>
+            <p>feels like</p>
               {data.main ? <p className='bold'>{data.main.feels_like}</p> : <p>unavailable</p>}
              
-              <p>feels like</p>
+             
             </div>
             <div className='humidity'>
+            <p>humidity</p>
               {data.main ? <p className='bold'> {data.main.humidity.toFixed()}%</p> : null}
                 
-                <p>humidity</p>
+                
             </div>
             <div className='wind'>
+            <p>wind speed</p>
               {data.main ? <p className='bold'> {data.wind.speed.toFixed()} K/PH</p> : null}
-              <p>wind speed</p>
+              
             </div>
           </div>
 }
