@@ -40,9 +40,15 @@ function App() {
               {data.main ?<img className='icon-img' src= {`https://raw.githubusercontent.com/yuvraaaj/openweathermap-api-icons/master/icons/${data.weather[0].icon}.png`}/> : null}
             </div>
             <div className='description'>
-            <p>Description</p>
+            {data.weather ? <p>Description</p> : <p>Welcome Back :) enter a city name to see the weather</p>}
               {data.weather ? <p>{data.weather[0].main}</p> : null}
               
+            </div>
+            <div className='time'>
+              
+            {data.weather ? <p>Sunrise: {new Date(data.sys.sunrise * 1000).toLocaleTimeString('en-IN')}<p>Sunset: {new Date(data.sys.sunset * 1000).toLocaleTimeString('en-IN')}</p></p> 
+         : null}
+            
             </div>
           </div>
 
